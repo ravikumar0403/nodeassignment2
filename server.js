@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const mongoose = require("mongoose");
-const Port = 8000;
+const Port = process.env.PORT || 3000;
 
 const dbUrl =
   "mongodb+srv://dbUser:nNgja7GgKLqBNtDT@cluster0.vqyvr.mongodb.net/cricket?retryWrites=true&w=majority";

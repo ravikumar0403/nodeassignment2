@@ -8,6 +8,10 @@
     <title>Cricket Database</title>
 
     <style>
+        *:focus {
+            outline: none;
+        }
+
         main {
             display: flex;
             align-items: center;
@@ -31,12 +35,22 @@
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
         }
+
+        .btn {
+            border: none;
+            background-color: blue;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 20px;
+            width: 100px;
+        }
     </style>
 </head>
 
 <body>
     <main>
-        <button onclick="getPrevPlayer()">Prev</button>
+        <button class="btn" onclick="getPrevPlayer()">Prev</button>
         <div>
             <img src={{ player.image }}>
             <h2>{{ player.playerName }}</h2>
@@ -44,7 +58,7 @@
             <p>Price : {{ player.price }}</p>
         </div>
 
-        <button onclick="getNextPlayer()">Next</button>
+        <button class="btn" onclick="getNextPlayer()">Next</button>
     </main>
     <script>
         let url = window.location.href
