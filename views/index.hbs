@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Database</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .btn {
+            background-color: blue;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The Cricket Database</h1>
+    <a class="btn" href="./players/1">Show all Players</a>
+    <script>
+        let input = document.querySelector(".input")
+        let btn = document.querySelector(".search")
+        btn.addEventListener("click", () => {
+            window.location.href = "/" + input.value
+        })
+    </script>
+</body>
+
+</html>

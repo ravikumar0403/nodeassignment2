@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Database</title>
+
+    <style>
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+
+        }
+
+        div {
+            text-align: center;
+            box-shadow: 2px 2px 2px #ccc;
+            max-width: 500px;
+            min-width: 500px;
+            min-height: 400px;
+            border-radius: 20px;
+            margin: 20px;
+        }
+
+        div img {
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <button onclick="getPrevPlayer()">Prev</button>
+        <div>
+            <img src={{ player.image }}>
+            <h2>{{ player.playerName }}</h2>
+            <h3> Team : {{ player.from }}</h3>
+            <p>Price : {{ player.price }}</p>
+        </div>
+
+        <button onclick="getNextPlayer()">Next</button>
+    </main>
+    <script>
+        let url = window.location.href
+        let params = url.split('/');
+        let id = params[params.length - 1]
+        function getNextPlayer() {
+            console.log("clicked")
+            id++;
+            window.location.href = id
+        }
+        function getPrevPlayer() {
+            console.log("clicked")
+            id--;
+            window.location.href = id
+        }
+    </script>
+</body>
+
+</html>
